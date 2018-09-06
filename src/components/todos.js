@@ -29,14 +29,9 @@ class Todos extends Component {
     // console.log("this.state.todos", this.state.todos);
   };
 
-  handleDelete = event => {
-    console.log(" this.state.todos", this.state.todos);
-    console.log("event.target.value", event.target.value);
-    let index = this.state.todos.indexOf(event.target.value);
-    console.log("index", index);
+  handleDelete = index => {
     let updatedArray = this.state.todos;
     updatedArray.splice(index, 1);
-    console.log("updatedArray", updatedArray);
     this.setState({ todos: updatedArray });
   };
 
@@ -64,9 +59,7 @@ class Todos extends Component {
               >
                 {this.state.todos[x]}
               </div>
-              <button value={this.state.value[x]} onClick={this.handleDelete}>
-                x
-              </button>
+              <button onClick={() => this.handleDelete(x)}>x</button>
             </div>
           ))}
         </div>
