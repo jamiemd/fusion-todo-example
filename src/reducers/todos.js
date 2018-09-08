@@ -10,12 +10,12 @@ export default (state = initialState, action) => {
     case SUBMIT_TODO:
       return {
         ...state,
-        todos: action.payload
+        ...action.payload
       };
     case DELETE_TODO:
       return {
         ...state,
-        todos: action.payload
+        ...action.payload
       };
     default:
       return state;

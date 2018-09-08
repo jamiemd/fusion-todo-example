@@ -39,7 +39,7 @@ class Todos extends Component {
   };
 
   render() {
-    // console.log("this.state", this.state);
+    console.log("this.props", this.props);
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -47,20 +47,20 @@ class Todos extends Component {
             type="text"
             name="todo"
             placeholder="add a new todo..."
-            value={this.state.value}
+            value={this.props.value}
             onChange={this.handleChange}
           />
           <button type="submit">Submit</button>
         </form>
         <div className="list-container">
-          {Object.keys(this.state.todos).map((x, i) => (
+          {Object.keys(this.props.todos).map((x, i) => (
             <div className={todo} key={i}>
               <div
                 onClick={() => {
                   this.handleCrossOff(todo);
                 }}
               >
-                {this.state.todos[x]}
+                {this.props.todos[x]}
               </div>
               <button onClick={() => this.handleDelete(x)}>x</button>
             </div>
@@ -76,9 +76,9 @@ const todo = {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
+  // console.log("state in todos", state);
   return {
-    todo: state
+    todos: state
   };
 };
 
