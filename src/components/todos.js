@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
+import { submitTodo, deleteTodo } from "../actions/todos";
 
 class Todos extends Component {
   constructor(props) {
@@ -18,7 +21,7 @@ class Todos extends Component {
     const newTodo = this.state.value;
     const todoArray = this.state.todos;
     todoArray.push(newTodo);
-    this.setState({ todos: todoArray });
+    this.props.submitTodo(todoArray);
   };
 
   handleCrossOff = event => {
@@ -32,7 +35,7 @@ class Todos extends Component {
   handleDelete = index => {
     let updatedArray = this.state.todos;
     updatedArray.splice(index, 1);
-    this.setState({ todos: updatedArray });
+    this.props.deleteTodo(updatedArray);
   };
 
   render() {
@@ -72,4 +75,17 @@ const todo = {
   display: "flex"
 };
 
-export default Todos;
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    todo: state
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  {
+    submitTodo,
+    deleteTodo
+  }
+)(Todos);

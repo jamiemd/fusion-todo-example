@@ -8,7 +8,6 @@ import Todos from "./components/todos.js";
 
 const root = (
   <Switch>
-    {/* <Route exact path="/" component={Home} /> */}
     <Route exact path="/" component={Todos} />
     <Route component={PageNotFound} />
   </Switch>

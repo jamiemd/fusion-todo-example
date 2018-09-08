@@ -1,14 +1,18 @@
 export const SUBMIT_TODO = "SUBMIT_TODO";
 export const DELETE_TODO = "DELETE_TODO";
 
-export const submitTodo = () => {
+export const submitTodo = array => {
+  console.log("array", array);
+
   return {
-    type: submitTodo
+    type: submitTodo,
+    todos: array
   };
 };
 
-export const deleteTodo = () => {
+export const deleteTodo = updatedArray => {
   return {
-    type: deleteTodo
+    type: deleteTodo,
+    todos: updatedArray
   };
 };

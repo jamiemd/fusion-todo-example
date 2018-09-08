@@ -2539,6 +2539,10 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
+eslint-plugin-jest@^21.18.0:
+  version "21.22.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.22.0.tgz#1b9e49b3e5ce9a3d0a51af4579991d517f33726e"
+
 eslint-scope@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.0.tgz#50bf3071e9338bcdc43331794a0cb533f0136172"
@@ -3085,6 +3089,12 @@ fusion-plugin-react-helmet-async@^1.0.0:
   dependencies:
     react-helmet-async "^0.1.0"
 
+fusion-plugin-react-redux@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/fusion-plugin-react-redux/-/fusion-plugin-react-redux-1.0.9.tgz#fdfc96f91367b8b127a16c2931c1fbb70c14d007"
+  dependencies:
+    eslint-plugin-jest "^21.18.0"
+
 fusion-plugin-react-router@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/fusion-plugin-react-router/-/fusion-plugin-react-router-1.2.0.tgz#e8dae1672128365c7cc7959e8ad99641de2b917e"
@@ -3092,6 +3102,10 @@ fusion-plugin-react-router@^1.2.0:
     history "^4.7.2"
     prop-types "^15.6.2"
     react-router-dom "^4.3.1"
+
+fusion-plugin-redux-action-emitter-enhancer@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/fusion-plugin-redux-action-emitter-enhancer/-/fusion-plugin-redux-action-emitter-enhancer-1.0.4.tgz#5972435b3b5037f92473c55676445cf049d438d8"
 
 fusion-plugin-styletron-react@^2.5.2:
   version "2.5.2"
@@ -3112,6 +3126,10 @@ fusion-react@^1.2.0:
   dependencies:
     prop-types "^15.6.2"
     react-is "^16.4.2"
+
+fusion-redux-action-emitter-enhancer@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/fusion-redux-action-emitter-enhancer/-/fusion-redux-action-emitter-enhancer-0.1.5.tgz#dc19ad59adc219eada6118015b8b6271787d63c8"
 
 fusion-tokens@^1.0.4:
   version "1.0.4"
@@ -3605,7 +3623,7 @@ inquirer@3.3.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-invariant@^2.2.0, invariant@^2.2.1, invariant@^2.2.2, invariant@^2.2.4:
+invariant@^2.0.0, invariant@^2.2.0, invariant@^2.2.1, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   dependencies:
@@ -4612,6 +4630,10 @@ locate-path@^2.0.0:
   dependencies:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
+
+lodash-es@^4.17.5:
+  version "4.17.10"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.10.tgz#62cd7104cdf5dd87f235a837f0ede0e8e5117e05"
 
 lodash.debounce@^4.0.8:
   version "4.0.8"
@@ -5835,6 +5857,17 @@ react-reconciler@^0.7.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react-redux@^5.0.7:
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.7.tgz#0dc1076d9afb4670f993ffaef44b8f8c1155a4c8"
+  dependencies:
+    hoist-non-react-statics "^2.5.0"
+    invariant "^2.0.0"
+    lodash "^4.17.5"
+    lodash-es "^4.17.5"
+    loose-envify "^1.1.0"
+    prop-types "^15.6.0"
+
 react-router-dom@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.3.1.tgz#4c2619fc24c4fa87c9fd18f4fb4a43fe63fbd5c6"
@@ -5923,6 +5956,13 @@ recursive-readdir@2.2.1:
   resolved "https://registry.yarnpkg.com/recursive-readdir/-/recursive-readdir-2.2.1.tgz#90ef231d0778c5ce093c9a48d74e5c5422d13a99"
   dependencies:
     minimatch "3.0.3"
+
+redux@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.0.tgz#aa698a92b729315d22b34a0553d7e6533555cc03"
+  dependencies:
+    loose-envify "^1.1.0"
+    symbol-observable "^1.2.0"
 
 regenerate-unicode-properties@^7.0.0:
   version "7.0.0"
@@ -6686,6 +6726,10 @@ svgo@^1.0.5:
     stable "~0.1.6"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+symbol-observable@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
 symbol-tree@^3.2.2:
   version "3.2.2"

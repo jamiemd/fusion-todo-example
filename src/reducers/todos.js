@@ -1,6 +1,23 @@
 import { SUBMIT_TODO, DELETE_TODO } from "../actions/todos";
 
-initialState = {
-    todos: [];
-    
-}
+const initialState = {
+  todos: [],
+  value: ""
+};
+
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case SUBMIT_TODO:
+      return {
+        ...state,
+        todos: action.payload
+      };
+    case DELETE_TODO:
+      return {
+        ...state,
+        todos: action.payload
+      };
+    default:
+      return state;
+  }
+};
